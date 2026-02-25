@@ -6,13 +6,8 @@
 	<!-- bean definitions here -->
 	<bean id="sobj" class="com.aot.beans.MyView">
 
-		<property name="prefix">
-			<value>page</value>
-		</property>
-
-		<property name="suffix">
-			<value>jsp</value>
-		</property>
+		<property name="prefix" value="page" />
+		<property name="suffix" value="jsp" />
 
 	</bean>
 
