@@ -1,22 +1,21 @@
 package com.aot.test;
 
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.context.ApplicationContext;
-
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import com.aot.beans.MyView;
-
+import com.aot.config.AppConfig;
 
 public class Test {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+		// Activate (call) ApplicationContext container
 		
-		MyView m1=(MyView)context.getBean("sobj");
-		System.out.println(m1);		
+		AnnotationConfigApplicationContext ac=new AnnotationConfigApplicationContext(AppConfig.class);
+				
+		MyView my=ac.getBean("mobj",MyView.class);
+		System.out.println(my);
 		
-		
+		ac.close();
 	}
 
 }

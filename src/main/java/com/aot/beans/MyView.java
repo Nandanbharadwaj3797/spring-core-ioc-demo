@@ -1,29 +1,25 @@
 package com.aot.beans;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component("mobj")
 public class MyView {
 	
+	@Value("Nandan")
 	private String prefix;
+	
+	@Value("Kumar")
 	private String suffix;
 	
+	
+
 	public MyView() {
+		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public String getPrefix() {
-		return prefix;
-	}
 
-	public void setPrefix(String prefix) {
-		this.prefix = prefix;
-	}
-
-	public String getSuffix() {
-		return suffix;
-	}
-
-	public void setSuffix(String suffix) {
-		this.suffix = suffix;
-	}
 
 	@Override
 	public String toString() {
