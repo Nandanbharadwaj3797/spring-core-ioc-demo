@@ -6,10 +6,10 @@ import org.springframework.stereotype.Component;
 @Component("mobj")
 public class MyView {
 	
-	@Value("Nandan")
+	@Value("${prefix-name}")
 	private String prefix;
 	
-	@Value("Kumar")
+	@Value("${suffix.name}")
 	private String suffix;
 	
 	
